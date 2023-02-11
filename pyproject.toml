@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "lefaso-net-scraper"
+version = "0.1.0"
+description = "A lib to scrap lefaso.net data"
+authors = ["abdoulfataoh <abdoulfataoh@gmail.com>"]
+readme = "README.md"
+packages = [{include = "lefaso_net_scraper"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+beautifulsoup4 = "^4.11.2"
+unidecode = "^1.3.6"
+aiohttp = "3.7.4.post0"
+requests = "2.25.1"
+environs = "^9.5.0"
+pandas = "^1.5.3"
+openpyxl = "^3.1.0"
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "^8.10.0"
+mypy = "^1.0.0"
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
