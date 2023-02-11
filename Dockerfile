@@ -18,13 +18,9 @@ ADD ./ /src
 
 # [Install poetry]
 RUN pip install -U pip
-RUN pip install poetry
+RUN pip install -r requirements.txt
 
-# [Install requiered modules]
-RUN poetry config virtualenvs.in-project true
-RUN poetry install
 
-# [Enable venv]
-RUN /src/.venv/bin/python3 start.py
+RUN python3 start.py
 
 ADD ./assets/dataset/* /src/
