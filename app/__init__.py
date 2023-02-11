@@ -13,7 +13,7 @@ __all = [
 dm = DatasetManager(
     dataset_type='json_list',
     dataset_path=settings.DATASET_PATH,
-    cache_size=1
+    cache_size=100
 )
 
 lefaso_scaper_jobs = []
@@ -31,7 +31,6 @@ lefaso_scaper_jobs = []
 #             dataset_manager=dm,
 #         )
 # )
-
 
 
 lefaso_scraper_patch = LefasoNetScraper(
