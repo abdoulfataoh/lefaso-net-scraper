@@ -13,7 +13,7 @@ import pandas as pd
 
 
 sheets_names = [
-    'Politique',
+    'Economie',
 ]
 
 async def run_path():
