@@ -7,6 +7,7 @@ from typing import Literal
 from typing import Dict
 from datetime import datetime
 from urllib.parse import urljoin
+import json
 
 import asyncio
 import aiohttp
@@ -209,6 +210,7 @@ class LefasoNetScraper():
         progess = 0
         progress_100 = len(urls)
         id = 0
+        df = []
 
         for url in urls:
             logger.info(f'({progess}/{progress_100}) - {url}')
@@ -220,7 +222,7 @@ class LefasoNetScraper():
             try:
                 title_div = soup.select('div[class="col-xs-12 col-sm-12 col-md-8 col-lg-8"] > h3 > p')
                 for paragraph in title_div:
-                    self._dm.append(
+                    df.append(
                         {
                             'url': url,
                             'topic': topic,
@@ -235,7 +237,7 @@ class LefasoNetScraper():
             try:
                 content_div = soup.select('div[class="article_content"] > p')
                 for paragraph in content_div:
-                    self._dm.append(
+                    df.append(
                         {
                             'url': url,
                             'topic': topic,
@@ -247,5 +249,7 @@ class LefasoNetScraper():
             except Exception as e:
                 logger.warning(f'{url}: {e}')
             
-            self._dm.save()
+        with open('df.json', 'w') as f:
+            json.dump(df, f, indent=2, ensure_ascii=False)
+            logger.info('-------SAVE DATASET-------')
 
