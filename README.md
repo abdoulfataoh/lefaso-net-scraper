@@ -14,6 +14,8 @@ lefaso-net-scraper is a robust and versatile Python library designed to efficien
 
 # Data Format
 
+<div align="center">
+
 | Field                  | Description            |
 |------------------------|------------------------|
 | article_topic          | article topic          |
@@ -23,6 +25,8 @@ lefaso-net-scraper is a robust and versatile Python library designed to efficien
 | article_url            | article url            |
 | article_content        | article content        |
 | article_comments       | article comments       |
+
+</div>
 
 ### Installation
 
