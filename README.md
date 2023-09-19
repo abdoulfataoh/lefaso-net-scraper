@@ -38,8 +38,6 @@ pip install lefaso-net-scraper
 from lefaso_net_scraper import LefasoNetScraper
 
 section_url = 'https://lefaso.net/spip.php?rubrique473'
-
 task = LefasoNetScraper(section_url)
-
 data = task.run()
 ```
