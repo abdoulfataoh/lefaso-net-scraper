@@ -3,6 +3,7 @@
 <div align="center">
   <p>
     <a href="https://pypi.org/project/lefaso-net-scraper/"><img src="https://pypi.org/static/images/logo-small.2a411bc6.svg" style="width:50px;height:50px;"></a>
+    <div margin: 0 px> <a href="href="https://pypi.org/project/lefaso-net-scraper"> pypi </a> </div>
   </p>
 </div>
 
