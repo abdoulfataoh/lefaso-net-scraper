@@ -58,8 +58,21 @@ pip install lefaso-net-scraper
 from lefaso_net_scraper import LefasoNetScraper
 
 section_url = 'https://lefaso.net/spip.php?rubrique473'
-task = LefasoNetScraper(section_url)
-data = task.run()
+scraper = LefasoNetScraper(section_url)
+data = scraper.run()
+```
+
+> Settings Pagination range
+
+```python
+# coding: utf-8
+
+from lefaso_net_scraper import LefasoNetScraper
+
+section_url = 'https://lefaso.net/spip.php?rubrique473'
+scraper = LefasoNetScraper(section_url)
+scraper.pagination_range(start=20, stop=100)
+data = scraper.run()
 ```
 
 > Save data to csv
@@ -70,7 +83,11 @@ data = task.run()
 
 import pandas as pd
 
+from lefaso_net_scraper import LefasoNetScraper
+
+section_url = 'https://lefaso.net/spip.php?rubrique473'
+scraper = LefasoNetScraper(section_url)
+data = scraper.run()
 df = pd.DataFrame.from_records(data)
 df.to_csv('path/to/df.csv')
-
 ```
