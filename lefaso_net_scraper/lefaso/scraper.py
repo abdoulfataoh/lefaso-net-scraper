@@ -121,8 +121,7 @@ class LefasoNetScraper:
         response = requests.get(self._topic_url)
         soup = BeautifulSoup(response.content, 'html.parser')
         start_of_pagination = 0
-        end_of_pagination = soup.select('.pagination > .pages > a')[-1].text
-        end_of_pagination = int(end_of_pagination)
+        end_of_pagination = int(soup.select('.pagination > .pages > a')[-1].text)  # noqa: E501
         pagination_range = range(
             start_of_pagination,
             end_of_pagination + settings.LEFASO_PAGINATION_STEP,
