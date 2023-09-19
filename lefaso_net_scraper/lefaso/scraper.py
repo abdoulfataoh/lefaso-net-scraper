@@ -59,7 +59,7 @@ class LefasoNetScraper:
     def run(self):
         asyncio.run(self._get_articles_data())
 
-    async def _get_articles_data(self):
+    async def _get_articles_data(self) -> List[dict]:
         articles = []
         for pagination in self._pagination_range:
             url = self._topic_url + settings.LEFASO_PAGINATION_TEMPLATE
@@ -85,8 +85,8 @@ class LefasoNetScraper:
                         comments_div = soup.select('.comment-texte')
                         for comment in comments_div:
                             if comment is not None or comment != '':
-                                comment = unidecode(comment.text)
-                                article_comments.append(comment)
+                                comment_text = unidecode(comment.text)
+                                article_comments.append(comment_text)
 
                         article = Article.to_dict(
                             article_topic=unidecode(article_topic),
@@ -102,7 +102,7 @@ class LefasoNetScraper:
 
         return articles
 
-    def _get_articles_urls_and_date(self, page_url: str) -> List[str]:
+    def _get_articles_urls_and_date(self, page_url: str) -> List[tuple]:
         articles_urls_and_date: list = []
         response = requests.get(page_url)
         soup = BeautifulSoup(response.content, 'html.parser')
@@ -129,3 +129,19 @@ class LefasoNetScraper:
         )
         logger.info(f"Pagination from {start_of_pagination} to {end_of_pagination}")  # noqa: E501
         return pagination_range
+
+    @property
+    def pagination_range(self) -> range:
+        return self._pagination_range
+
+    @pagination_range.setter
+    def pagination_range(self, start: int, stop: int) -> None:
+        if start < 0 or stop < 0:
+            logger.error("Invalid start or stop value")
+            raise ValueError
+        new_range = range(start, stop, settings.LEFASO_PAGINATION_STEP)
+        self.pagination_range = new_range
+
+    @pagination_range.deleter
+    def pagination_range(self) -> None:
+        raise Exception('Deletion is not permitted')
