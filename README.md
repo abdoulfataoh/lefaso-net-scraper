@@ -1,6 +1,14 @@
 ## lefaso-net-scraper
 
 
+
+<div align="center">
+  <p>
+    <img src="https://github.com/abdoulfataoh/lefaso-net-scraper/actions/workflows/test-action.yaml/badge.svg">
+    <img src="https://github.com/abdoulfataoh/lefaso-net-scraper/actions/workflows/publish-action.yaml/badge.svg">
+  </p>
+</div>
+
 ### Description
 lefaso-net-scraper is a robust and versatile Python library designed to efficiently extract articles from the popular online news source, lefaso.net. This powerful scraping tool allows users to effortlessly collect article content and data from Internet users’ comments on lefaso.net.
 
