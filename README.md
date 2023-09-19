@@ -44,6 +44,7 @@ pip install lefaso-net-scraper
 
 ### Usage
 
+  
 ```python
 # coding: utf-8
 
@@ -52,4 +53,17 @@ from lefaso_net_scraper import LefasoNetScraper
 section_url = 'https://lefaso.net/spip.php?rubrique473'
 task = LefasoNetScraper(section_url)
 data = task.run()
+```
+
+> Save data to csv
+
+```python
+
+# coding: utf-8
+
+import pandas as pd
+
+df = pd.DataFrame.from_records(data)
+df.to_csv('path/to/df.csv')
+
 ```
