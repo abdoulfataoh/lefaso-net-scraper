@@ -3,7 +3,7 @@
 <div align="center">
   <p>
     <a href="https://pypi.org/project/lefaso-net-scraper/"><img src="https://pypi.org/static/images/logo-small.2a411bc6.svg" style="width:50px;height:50px;"></a>
-    <a href="https://github.com/abdoulfataoh/lefaso-net-scraper/"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" style="width:160px;height:35px;"></a> 
+    <a href="https://github.com/abdoulfataoh/lefaso-net-scraper/"><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png" style="width:80px;height:40px;"></a> 
   </p>
 </div>
 
