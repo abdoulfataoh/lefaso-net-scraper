@@ -73,7 +73,7 @@ class LefasoNetScraper:
                         soup = BeautifulSoup(html, 'html.parser')
                         article_topic = soup.select('#hierarchie > a')[-1].text
                         article_title = soup.select('.entry-title')[-1].text
-                        article_origin = settings.LAFASO_URL
+                        article_origin = settings.LAFASO_URL.geturl()
                         article_summary = soup.select('div.col-xs-12.col-sm-12.col-md-8.col-lg-8 > h3')[0].text  # noqa: E501
                         article_content = article_summary
                         try:
@@ -92,7 +92,7 @@ class LefasoNetScraper:
                             article_topic=unidecode(article_topic),
                             article_title=unidecode(article_title),
                             article_published_date=article_date,
-                            article_origin=unidecode(article_origin),
+                            article_origin=article_origin,
                             article_url=article_url,
                             article_content=unidecode(article_content),
                             article_comments=article_comments,
