@@ -130,18 +130,10 @@ class LefasoNetScraper:
         logger.info(f"Pagination from {start_of_pagination} to {end_of_pagination}")  # noqa: E501
         return pagination_range
 
-    @property
-    def pagination_range(self) -> range:
-        return self._pagination_range
-
-    @pagination_range.setter
-    def pagination_range(self, start: int, stop: int) -> None:
+    def set_pagination_range(self, start: int, stop: int) -> None:
         if start < 0 or stop < 0:
-            logger.error("Invalid start or stop value")
+            logger.error(f"Invalid start or stop value")
             raise ValueError
         new_range = range(start, stop, settings.LEFASO_PAGINATION_STEP)
-        self.pagination_range = new_range
-
-    @pagination_range.deleter
-    def pagination_range(self) -> None:
-        raise Exception('Deletion is not permitted')
+        logger.info(f"Settings pagination range from {start} to {stop}")
+        self._pagination_range = new_range

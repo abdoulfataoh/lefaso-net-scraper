@@ -71,7 +71,7 @@ from lefaso_net_scraper import LefasoNetScraper
 
 section_url = 'https://lefaso.net/spip.php?rubrique473'
 scraper = LefasoNetScraper(section_url)
-scraper.pagination_range(start=20, stop=100)
+scraper.set_pagination_range(start=20, stop=100)
 data = scraper.run()
 ```
 
@@ -81,9 +81,8 @@ data = scraper.run()
 
 # coding: utf-8
 
-import pandas as pd
-
 from lefaso_net_scraper import LefasoNetScraper
+import pandas as pd
 
 section_url = 'https://lefaso.net/spip.php?rubrique473'
 scraper = LefasoNetScraper(section_url)
