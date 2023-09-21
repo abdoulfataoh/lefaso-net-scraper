@@ -30,7 +30,7 @@ class Article:
 
     article_topic: str
     article_title: str
-    article_published_date: datetime
+    article_published_date: str
     article_origin: str
     article_url: str
     article_content: str
@@ -57,7 +57,8 @@ class LefasoNetScraper:
         self._pagination_range = self._get_topic_pagination_range()
 
     def run(self):
-        asyncio.run(self._get_articles_data())
+        data = asyncio.run(self._get_articles_data())
+        return data
 
     async def _get_articles_data(self) -> List[dict]:
         articles = []
@@ -97,7 +98,6 @@ class LefasoNetScraper:
                             article_content=unidecode(article_content),
                             article_comments=article_comments,
                         )
-
                         articles.append(article)
 
         return articles
@@ -132,7 +132,7 @@ class LefasoNetScraper:
 
     def set_pagination_range(self, start: int, stop: int) -> None:
         if start < 0 or stop < 0:
-            logger.error(f"Invalid start or stop value")
+            logger.error("Invalid start or stop value")
             raise ValueError
         new_range = range(start, stop, settings.LEFASO_PAGINATION_STEP)
         logger.info(f"Settings pagination range from {start} to {stop}")
