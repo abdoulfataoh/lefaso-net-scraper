@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "lefaso-net-scraper"
-version = "0.2.7"
+version = "0.2.8"
 description = "The ultimate library for data scientist to scrape data from https://www.lefaso.net"
 authors = ["abdoulfataoh <abdoulfataoh@gmail.com>"]
 readme = "README.md"
