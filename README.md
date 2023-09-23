@@ -10,10 +10,10 @@
 
 <div align="center">
   <p>
-    <img src="https://github.com/abdoulfataoh/lefaso-net-scraper/actions/workflows/test-action.yaml/badge.svg">
-    <img src="https://github.com/abdoulfataoh/lefaso-net-scraper/actions/workflows/publish-action.yaml/badge.svg">
     <a href="https://badge.fury.io/py/lefaso-net-scraper"><img src="https://badge.fury.io/py/lefaso-net-scraper.svg" alt="PyPI version"></a>
     <a href="https://pepy.tech/project/lefaso-net-scraper"><img src="https://static.pepy.tech/badge/lefaso-net-scraper"></a>
+    <a href="https://github.com/abdoulfataoh/lefaso-net-scraper"><img src="https://github.com/abdoulfataoh/lefaso-net-scraper/actions/workflows/test-action.yaml/badge.svg"></a>
+    <a href="https://github.com/abdoulfataoh/lefaso-net-scraper"><img src="https://github.com/abdoulfataoh/lefaso-net-scraper/actions/workflows/publish-action.yaml/badge.svg"></a>
   </p>
 </div>
 
