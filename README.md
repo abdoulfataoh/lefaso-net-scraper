@@ -2,7 +2,7 @@
 
 <div align="center">
   <p>
-    <a href="https://pypi.org/project/lefaso-net-scraper/"><img src="https://github.com/abdoulfataoh/lefaso-net-scraper/blob/master/docs/icon.png" style="width:60px;height:60px;"></a>
+    <a href="https://pypi.org/project/lefaso-net-scraper/"><img src="https://raw.githubusercontent.com/abdoulfataoh/lefaso-net-scraper/master/docs/icon.png" style="width:60px;height:60px;"></a>
   </p>
 </div>
 
