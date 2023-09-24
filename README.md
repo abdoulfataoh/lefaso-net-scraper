@@ -89,3 +89,12 @@ data = scraper.run()
 df = pd.DataFrame.from_records(data)
 df.to_csv('path/to/df.csv')
 ```
+<br>
+
+<hr>
+
+### Support this project and others !
+
+<br>
+
+<a href="https://www.buymeacoffee.com/abdoulfataoh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
