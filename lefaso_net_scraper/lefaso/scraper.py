@@ -98,14 +98,14 @@ class LefasoNetScraper:
                             article_comments=article_comments,
                         )
                         articles.append(article)
-
         return articles
 
     def _get_articles_urls_and_date(self, page_url: str) -> List[tuple]:
         articles_urls_and_date: list = []
         response = requests.get(page_url)
         soup = BeautifulSoup(response.content, 'html.parser')
-        articles_divs = soup.find_all('div', settings.LEFASO_ARTICLE_ATTR)
+        articls_container = soup.find_all('div', settings.LEFASO_ARTICLES_CONTAINER)  # noqa: E501
+        articles_divs = articls_container[0].find_all('div', 'col-xs-12 col-sm-12 col-md-8 col-lg-8')  # noqa: E501
         for article_div in articles_divs:
             article_path = article_div.select('h3 > a')[0]['href']
             article_published_date = article_div.select('abbr.published')
