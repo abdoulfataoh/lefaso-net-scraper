@@ -43,12 +43,13 @@ lefaso-net-scraper is a robust and versatile Python library designed to efficien
 
 ```bash
 poetry add lefaso-net-scraper
+poetry update lefaso-net-scraper  # to update the package
 ```
 
 - With pip
 
 ```bash
-pip install lefaso-net-scraper
+pip install --upgrade  lefaso-net-scraper
 ```
 
 ### Usage
@@ -64,7 +65,7 @@ scraper = LefasoNetScraper(section_url)
 data = scraper.run()
 ```
 
-> Settings Pagination range
+- Settings Pagination range
 
 ```python
 # coding: utf-8
@@ -77,7 +78,7 @@ scraper.set_pagination_range(start=20, stop=100)
 data = scraper.run()
 ```
 
-> Save data to csv
+- Save data to csv
 
 ```python
 
@@ -92,12 +93,3 @@ data = scraper.run()
 df = pd.DataFrame.from_records(data)
 df.to_csv('path/to/df.csv')
 ```
-<br>
-
-<hr>
-
-### Support this project and others !
-
-<br>
-
-<a href="https://www.buymeacoffee.com/abdoulfataoh" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
