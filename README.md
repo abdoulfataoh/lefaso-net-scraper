@@ -93,3 +93,5 @@ data = scraper.run()
 df = pd.DataFrame.from_records(data)
 df.to_csv('path/to/df.csv')
 ```
+
+<p align="center">We ❤ open source</p>
