@@ -82,7 +82,7 @@ class LefasoNetScraper:
                         except Exception:
                             logger.warning(f"Unable to find content at {article_url}")  # noqa: E501
                         article_comments = []
-                        comments_div = soup.select('.comment-texte')
+                        comments_div = soup.select('.comment-content')
                         for comment in comments_div:
                             if comment is not None or comment != '':
                                 comment_text = unidecode(comment.text)
@@ -120,7 +120,7 @@ class LefasoNetScraper:
         response = requests.get(self._topic_url)
         soup = BeautifulSoup(response.content, 'html.parser')
         start_of_pagination = 0
-        end_of_pagination = int(soup.select('.pagination > .pages > a')[-1].text)  # noqa: E501
+        end_of_pagination = int(soup.select('.pagination-item')[-1].text)  # noqa: E501
         pagination_range = range(
             start_of_pagination,
             end_of_pagination + settings.LEFASO_PAGINATION_STEP,
