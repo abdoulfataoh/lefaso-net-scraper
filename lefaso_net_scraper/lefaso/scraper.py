@@ -82,7 +82,7 @@ class LefasoNetScraper:
                         except Exception:
                             logger.warning(f"Unable to find content at {article_url}")  # noqa: E501
                         article_comments = []
-                        comments_div = soup.select('.comment-content')
+                        comments_div = soup.select('.ugccmt-commenttext')
                         for comment in comments_div:
                             if comment is not None or comment != '':
                                 comment_text = unidecode(comment.text)
