@@ -16,7 +16,14 @@
 </div>
 
 ### Description
-lefaso-net-scraper is a robust and versatile Python library designed to efficiently extract articles from the popular online news source of of Burkina Faso, [www.lefaso.net](https://www.lefaso.net). This powerful scraping tool allows users to effortlessly collect article content and data from Internet users’ comments on lefaso.net.
+lefaso-net-scraper is a robust and versatile Python library designed to efficiently extract articles from the popular online news source in Burkina Faso,  [www.lefaso.net](https://www.lefaso.net). This powerful scraping tool allows users to effortlessly collect article content and user comments on lefaso.net.
+
+**Recommendation**: To avoid rate limiting and maximize data collection efficiency, it is recommended to use this script during periods of low traffic, such as late at night.
+
+
+
+
+
 
 ### Important
   > Our scraper, like other scrapers, is based on the structure of the target website. Changes to the website's structure can affect the scraper. We use automated workflows to detect these issues frequently, but we cannot catch all of them. Please report any issues you encounter and use the latest version.
