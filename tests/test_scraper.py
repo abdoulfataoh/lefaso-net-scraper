@@ -15,10 +15,18 @@ def data():
 
 
 def test_data(data):
-    assert len(data) > 0
-    article = data[0]
-    assert article['article_topic'] != ''
-    assert article['article_title'] != ''
-    assert article['article_published_date'] != ''
-    assert article['article_origin'] != ''
-    assert article['article_url'] != ''
+    assert len(data) > 0  # check data length
+    # check sample article fields
+    sample = data[0]
+    assert sample['article_topic']
+    assert sample['article_title']
+    assert sample['article_published_date']
+    assert sample['article_origin']
+    assert sample['article_url']
+    # check comments retrieve
+    articles_comments = []
+    for article in data:
+        article_comments = article['article_comments']
+        comments_exist = True if article_comments else False
+        articles_comments.append(comments_exist)
+    assert any(articles_comments)
