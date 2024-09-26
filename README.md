@@ -30,19 +30,18 @@ lefaso-net-scraper is a robust and versatile Python library designed to efficien
 
 ### Data Format
 
-<div align="center">
 
-| Field                  | Description            |
-|------------------------|------------------------|
-| article_topic          | article topic          |
-| article_title          | article title          |
-| article_published_date | article published date |
-| article_origin         | article origin         |
-| article_url            | article url            |
-| article_content        | article content        |
-| article_comments       | article comments       |
-
-</div>
+```json
+{
+  "article_topic": "Category or subject of the article.",
+  "article_title": "The main headline or title of the article.",
+  "article_published_date": "Date when the article was published.",
+  "article_origin": "Source or platform where the article was published.",
+  "article_url": "Web link to the article.",
+  "article_content": "Full text or body of the article.",
+  "article_comments": "Feedback or responses from readers."
+}
+```
 
 ### Installation
 
