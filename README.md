@@ -28,20 +28,22 @@ lefaso-net-scraper is a robust and versatile Python library designed to efficien
 ### Important
   > Our scraper, like other scrapers, is based on the structure of the target website. Changes to the website's structure can affect the scraper. We use automated workflows to detect these issues frequently, but we cannot catch all of them. Please report any issues you encounter and use the latest version.
 
-### Data Format
+### Data Format - list of JSON/dictionary objects with
 
 
-```json
-{
-  "article_topic": "Category or subject of the article.",
-  "article_title": "The main headline or title of the article.",
-  "article_published_date": "Date when the article was published.",
-  "article_origin": "Source or platform where the article was published.",
-  "article_url": "Web link to the article.",
-  "article_content": "Full text or body of the article.",
-  "article_comments": "Feedback or responses from readers."
-}
-```
+<div align="center">
+
+| Field                  | Description                                          |
+|------------------------|------------------------------------------------------|
+| `article_topic`         | Category or subject of the article.                  |
+| `article_title`         | The main headline or title of the article.           |
+| `article_published_date`| Date when the article was published.                 |
+| `article_origin`        | Source or platform where the article was published.  |
+| `article_url`           | Web link to the article.                             |
+| `article_content`       | Full text or body of the article.                    |
+| `article_comments`      | Feedback or responses from readers.                  |
+
+</div>
 
 ### Installation
 
