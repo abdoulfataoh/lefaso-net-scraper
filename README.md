@@ -46,17 +46,17 @@ lefaso-net-scraper is a robust and versatile Python library designed to efficien
 
 ### Installation
 
-- With poetry
+- Using pip
+
+```bash
+pip install --upgrade  lefaso-net-scraper
+```
+
+- Using poetry
 
 ```bash
 poetry add lefaso-net-scraper
 poetry update lefaso-net-scraper  # to update the package
-```
-
-- With pip
-
-```bash
-pip install --upgrade  lefaso-net-scraper
 ```
 
 ### Usage
