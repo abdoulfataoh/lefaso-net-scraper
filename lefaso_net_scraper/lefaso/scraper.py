@@ -58,9 +58,9 @@ class LefasoNetScraper:
     def run(self):
         is_jupyter_env: bool = False
         try:
-            from IPython import get_ipython  # noqa:F401
+            __IPYTHON__  # type: ignore
             is_jupyter_env = True
-        except ModuleNotFoundError:
+        except NameError:
             ...
 
         if is_jupyter_env:
@@ -76,9 +76,9 @@ class LefasoNetScraper:
                     "  or \n"
                     "  pip install lefaso-net-scraper[notebook]"
                 )
-            else:
-                data = asyncio.run(self._get_articles_data())
-                return data
+
+        data = asyncio.run(self._get_articles_data())
+        return data
 
     async def _get_articles_data(self) -> List[dict]:
         articles = []
