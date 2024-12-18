@@ -65,8 +65,8 @@ class LefasoNetScraper:
 
         if is_jupyter_env:
             try:
-                import nest_asyncio
-                nest_asyncio.apply()
+                import nest_asyncio  # type: ignore
+                nest_asyncio.apply()  # type: ignore
             except ModuleNotFoundError:
                 logger.warning(
                     "You are running the scraper in a Jupyter environment, "
