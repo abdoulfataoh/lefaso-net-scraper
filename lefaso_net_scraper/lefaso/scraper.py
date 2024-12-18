@@ -56,8 +56,29 @@ class LefasoNetScraper:
         self._pagination_range = self._get_topic_pagination_range()
 
     def run(self):
-        data = asyncio.run(self._get_articles_data())
-        return data
+        is_jupyter_env: bool = False
+        try:
+            from IPython import get_ipython  # noqa:F401
+            is_jupyter_env = True
+        except ModuleNotFoundError:
+            ...
+
+        if is_jupyter_env:
+            try:
+                import nest_asyncio
+                nest_asyncio.apply()
+            except ModuleNotFoundError:
+                logger.warning(
+                    "You are running the scraper in a Jupyter environment, "
+                    "but the Jupyter requirements are not installed. "
+                    "To install the Jupyter requirements, run following:\n"
+                    "  poetry install lefaso-net-scraper[notebook] \n"
+                    "  or \n"
+                    "  pip install lefaso-net-scraper[notebook]"
+                )
+            else:
+                data = asyncio.run(self._get_articles_data())
+                return data
 
     async def _get_articles_data(self) -> List[dict]:
         articles = []
