@@ -47,7 +47,7 @@ lefaso-net-scraper is a robust and versatile Python library designed to efficien
 ```bash
 pip install --upgrade  lefaso-net-scraper
 
-# For jupiter support
+# Optional: For Jupyter Notebook support
 pip install --upgrade  lefaso-net-scraper[notebook]
 ```
 
@@ -56,7 +56,7 @@ pip install --upgrade  lefaso-net-scraper[notebook]
 ```bash
 poetry add lefaso-net-scraper
 
-# For jupiter support
+# Optional: For Jupyter Notebook support
 poetry add lefaso-net-scraper[notebook]
 ```
 
