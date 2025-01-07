@@ -42,23 +42,18 @@ lefaso-net-scraper is a robust and versatile Python library designed to efficien
 
 ### Installation
 
-- Using pip
+- To install support for Python script files only
 
 ```bash
 pip install --upgrade  lefaso-net-scraper
+```
 
-# Optional: For Jupyter Notebook support
+- To additionally include support for Jupyter Notebook (optional)
+
+```bash
 pip install --upgrade  lefaso-net-scraper[notebook]
 ```
 
-- Using poetry
-
-```bash
-poetry add lefaso-net-scraper
-
-# Optional: For Jupyter Notebook support
-poetry add lefaso-net-scraper[notebook]
-```
 
 ### Usage
 
@@ -68,7 +63,7 @@ poetry add lefaso-net-scraper[notebook]
 
 from lefaso_net_scraper import LefasoNetScraper
 
-section_url = 'https://lefaso.net/spip.php?rubrique473'
+topic_url = 'https://lefaso.net/spip.php?rubrique473'
 scraper = LefasoNetScraper(section_url)
 data = scraper.run()
 ```
@@ -80,7 +75,7 @@ data = scraper.run()
 
 from lefaso_net_scraper import LefasoNetScraper
 
-section_url = 'https://lefaso.net/spip.php?rubrique473'
+topic_url = 'https://lefaso.net/spip.php?rubrique473'
 scraper = LefasoNetScraper(section_url)
 scraper.set_pagination_range(start=20, stop=100)
 data = scraper.run()
@@ -95,7 +90,7 @@ data = scraper.run()
 from lefaso_net_scraper import LefasoNetScraper
 import pandas as pd
 
-section_url = 'https://lefaso.net/spip.php?rubrique473'
+topic_url = 'https://lefaso.net/spip.php?rubrique473'
 scraper = LefasoNetScraper(section_url)
 data = scraper.run()
 df = pd.DataFrame.from_records(data)
