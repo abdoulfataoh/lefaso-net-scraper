@@ -9,7 +9,7 @@ from lefaso_net_scraper import LefasoNetScraper
 def data():
     section_url = 'https://lefaso.net/spip.php?rubrique473'
     scraper = LefasoNetScraper(section_url)
-    scraper.set_pagination_range(start=20, stop=40)
+    scraper.set_pagination_range(start=20, stop=60)
     data = scraper.run()
     return data
 
@@ -29,4 +29,4 @@ def test_data(data):
         article_comments = article['article_comments']
         comments_exist = True if article_comments else False
         articles_comments.append(comments_exist)
-    assert any(articles_comments)
+    assert len(articles_comments) > 20
