@@ -15,7 +15,7 @@ def data():
 
 
 def test_data(data):
-    assert len(data) > 0  # check data length
+    assert len(data) > 20  # check data length
     # check sample article fields
     sample = data[0]
     assert sample['article_topic']
@@ -29,4 +29,4 @@ def test_data(data):
         article_comments = article['article_comments']
         comments_exist = True if article_comments else False
         articles_comments.append(comments_exist)
-    assert len(articles_comments) > 20
+    assert any(articles_comments)
