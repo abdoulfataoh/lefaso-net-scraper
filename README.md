@@ -64,7 +64,7 @@ pip install --upgrade  lefaso-net-scraper[notebook]
 from lefaso_net_scraper import LefasoNetScraper
 
 topic_url = 'https://lefaso.net/spip.php?rubrique473'
-scraper = LefasoNetScraper(section_url)
+scraper = LefasoNetScraper(topic_url)
 data = scraper.run()
 ```
 
@@ -76,7 +76,7 @@ data = scraper.run()
 from lefaso_net_scraper import LefasoNetScraper
 
 topic_url = 'https://lefaso.net/spip.php?rubrique473'
-scraper = LefasoNetScraper(section_url)
+scraper = LefasoNetScraper(topic_url)
 scraper.set_pagination_range(start=20, stop=100)
 data = scraper.run()
 ```
@@ -91,7 +91,7 @@ from lefaso_net_scraper import LefasoNetScraper
 import pandas as pd
 
 topic_url = 'https://lefaso.net/spip.php?rubrique473'
-scraper = LefasoNetScraper(section_url)
+scraper = LefasoNetScraper(topic_url)
 data = scraper.run()
 df = pd.DataFrame.from_records(data)
 df.to_csv('path/to/df.csv')
