@@ -1,8 +1,8 @@
 help:
 	@echo "make help            	- Prints this help message"
-	@echo "make flake8				- Test flake8			  "
-	@echo "make mypy				- Test mypy			  	  "
-	@echo "make pytest				- Test with pytest			  	  "
+	@echo "make flake8		- Test flake8"
+	@echo "make mypy		- Test mypy"
+	@echo "make pytest		- Test with pytest"
 
 
 flake8:
