@@ -26,7 +26,6 @@ __all__ = [
 
 @dataclass
 class Article:
-
     article_topic: str
     article_title: str
     article_published_date: str
@@ -41,13 +40,11 @@ class Article:
 
 
 class LefasoNetUrlError(Exception):
-
     def __str__(self) -> str:
         return "Exception LefasoNetUrlError, lefaso.net url is expected"
 
 
 class LefasoNetScraper:
-
     _topic_url: str
     _pagination_range: range
 
